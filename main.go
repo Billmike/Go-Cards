@@ -3,11 +3,8 @@ package main
 func main() {
 
 	cards := newDeck()
-	hands, remainingDeck := deal(cards, 5)
-
-	hands.print()
-	remainingDeck.print()
-
+	cards.shuffle()
+	cards.print()
 }
 
 func newCard() string {
