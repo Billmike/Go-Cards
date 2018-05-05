@@ -3,7 +3,8 @@ package main
 func main() {
 
 	cards := newDeck()
-	cards.saveToFile("my_file")
+	cards.shuffle()
+	cards.print()
 }
 
 func newCard() string {
