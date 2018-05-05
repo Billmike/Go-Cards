@@ -6,6 +6,7 @@ import (
 
 type deck []string
 
+// Function that creates a new deck of cards
 func newDeck() deck {
 	cards := deck{}
 
@@ -21,8 +22,15 @@ func newDeck() deck {
 	return cards
 }
 
+// Function that prints out the deck of cards
 func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
 	}
+}
+
+// Function that handles dealing of cards
+
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }
