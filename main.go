@@ -3,11 +3,7 @@ package main
 func main() {
 
 	cards := newDeck()
-	hands, remainingDeck := deal(cards, 5)
-
-	hands.print()
-	remainingDeck.print()
-
+	cards.saveToFile("my_file")
 }
 
 func newCard() string {
